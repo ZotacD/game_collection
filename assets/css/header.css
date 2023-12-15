@@ -8,12 +8,14 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #211F2A;
-    width: 100vw;
+    width: 90vw;
     padding-left: 5vw;
     padding-right: 5vw;
     color: whitesmoke;
     height: 10vh;
+    font-size: 1.1rem;
 }
 header a{
     color: whitesmoke;
