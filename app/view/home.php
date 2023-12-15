@@ -8,7 +8,10 @@
     <title>Document</title>
 </head>
 <body>
-        <?php require_once "assets/component/header.php";?>
+    <?php require_once "assets/component/header.php";?>
     <h1>Home</h1>
+    
+    
+    <?php require_once "assets/component/footer.php";?>
 </body>
 </html>
