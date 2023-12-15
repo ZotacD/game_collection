@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <a href="index.php"><img src="" alt="Home"></a>
+        <a href="index.php">Homeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee</a>
         <div id="nav_right">
             <a href="index.php">MA BIBLIOTHÈQUE</a>
             <a href="index.php">AJOUTER UN JEU</a>
