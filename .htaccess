@@ -1,0 +1,16 @@
+ErrorDocument 403 /game-collection/403
+ErrorDocument 404 /game-collection/404
+
+Options +MultiViews
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)$ game-collection/index.php?url=$1 [QSA,L]
+RewriteRule ^([^/]+)/$ game-collection/$1 [R=301,QSA,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+)/([^/]+)$ game-collection/index.php?url=$1&endpoint=$2 [QSA,L]
+RewriteRule ^([^/]+)/([^/]+)/$ game-collection/$1/$2 [R=301,QSA,L]

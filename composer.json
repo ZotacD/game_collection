@@ -1,0 +1,13 @@
+{
+    "name": "zotacd/game_collection",
+    "type": "project",
+    "authors": [
+        {
+            "name": "ZotacD",
+            "email": "thomas.longjohn14@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
