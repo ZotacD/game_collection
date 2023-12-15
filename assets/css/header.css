@@ -8,8 +8,9 @@ body{
 header{
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #211F2A;
-    width: 100vw;
+    width: 90vw;
     padding-left: 5vw;
     padding-right: 5vw;
     color: whitesmoke;
@@ -23,5 +24,5 @@ header a{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 50vw;
+    width: 40vw;
 }
