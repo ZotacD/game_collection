@@ -1,6 +1,12 @@
 <?php
 
+require_once(__DIR__ . "/vendor/autoload.php");
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Récupérer l'URL depuis le paramètre "url"
+
 $requestUrl = isset($_GET['url']) ? $_GET['url'] : '/';
 
 switch ($requestUrl) {
