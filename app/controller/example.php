@@ -9,6 +9,6 @@ switch ($requestUrl) {
         require_once "view/example.php";
         break;
     default:
-        header("Location: " . "" . "/404");
+        header("Location: " . $_ENV["BASE_DIR"] . "404");
         exit();
 }
