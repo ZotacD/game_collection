@@ -38,10 +38,11 @@ INSERT INTO PERSON VALUES
 
 INSERT INTO GAME VALUES 
 (NULL, 'Grand Thief Auto VI', 'Rockstar Games', '2023-12-24', 'GTA VI est le meilleur jeu qui n a jamais été créé. Venez découvrir le plaisir à l état pur.','http://tinyurl.com/wy9uekx8', 'http://tinyurl.com/wy9uekx8'),
-(NULL, 'Fortnite', 'Epic Games', '20218-10-07', 'Fortnite est le plus grand Battle Roayle du monde. Ce jeu a déjà conquis des millions de personnes.','http://tinyurl.com/wy9uekx8', 'http://tinyurl.com/wy9uekx8'),
+(NULL, 'Fortnite', 'Epic Games', '2018-10-07', 'Fortnite est le plus grand Battle Roayle du monde. Ce jeu a déjà conquis des millions de personnes.','http://tinyurl.com/wy9uekx8', 'http://tinyurl.com/wy9uekx8'),
 (NULL, 'ED MOYENNE', 'Zotac', '2020-05-10', 'ED Moyenne est un jeu coopératif de survie. Il offre des centaines de façons différentes de jouer.','http://tinyurl.com/wy9uekx8', 'http://tinyurl.com/wy9uekx8'),
 (NULL, 'Adibou', 'Coktel Wision', '2010-02-24', 'Adibou est un jeu qui a été créé dans le but d apprendre en s amusant ! Ses méthodes pédagogiques permettent de faire activités ludiques pour tous les membres de la 		famille','http://tinyurl.com/wy9uekx8', 'http://tinyurl.com/wy9uekx8'),
 (NULL, 'World of Tanks', 'WarGaming', '2017-08-22', 'World of Tanks est un jeu multijoueur de combats en temps réel. Il offre une façon de jouer unique est accessible','http://tinyurl.com/wy9uekx8', 'http://tinyurl.com/wy9uekx8');
+
 
 INSERT INTO LIBRARY VALUES 
 (1, 1, 1, 25, 'PC'),
