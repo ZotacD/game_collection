@@ -12,27 +12,27 @@
 
 <body>
     <div class="main">
-        <form class="card">
+        <form class="card" method="post">
             <div class="title">Se connecter à Game Collection</div>
             <div class="userInputSection">
                 <div class="text">Prénom :</div>
-                <input name="fname_user" />
+                <input type="text" name="fname_user" />
             </div>
             <div class="userInputSection">
                 <div class="text">Nom de famille :</div>
-                <input name="name_user" />
+                <input type="text" name="name_user" />
             </div>
             <div class="userInputSection">
                 <div class="text">Email :</div>
-                <input name="mail_user" />
+                <input type="email" name="mail_user" />
             </div>
             <div class="userInputSection">
                 <div class="text">Mot de passe :</div>
-                <input name="password_user" />
+                <input type="password" name="password_user" />
             </div>
             <div class="userInputSection">
                 <div class="text">Confirmation du mot de passe :</div>
-                <input name="c_password_user" />
+                <input type="password" name="c_password_user" />
             </div>
             <button type="submit">S'INSCRIRE</button>
             <a href="auth/login">
