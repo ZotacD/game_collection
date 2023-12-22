@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <base href="<?php echo $_ENV["BASE_DIR"] ?>">
     <meta charset="UTF-8">
@@ -7,7 +8,9 @@
     <link rel="stylesheet" href="assets/css/footer.css">
     <title>Document</title>
 </head>
+
 <body>
-    <footer>Game Collection - 2023 - Tous droits réservés</footer>
+    <div class="footer">Game Collection - 2023 - Tous droits réservés</div>
 </body>
+
 </html>
