@@ -3,7 +3,7 @@
 // Récupérer l'URL depuis le paramètre "url"
 $requestUrl = isset($_GET['endpoint']) ? $_GET['endpoint'] : '/';
 
-if ($_SESSION["id_user"] === $_ENV["UNKNOWN_USER_ID"]) {
+if ($_SESSION["id_user"] !== $_ENV["UNKNOWN_USER_ID"]) {
     header("Location: " . $_ENV["BASE_DIR"] . "profile");
     exit();
 }
