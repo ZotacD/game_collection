@@ -13,12 +13,34 @@ function addUser($fname_user, $name_user, $mail_user, $password_user)
     ]);
 }
 
-function updateUser()
+function updateUser($id_user, $fname_user, $name_user, $mail_user, $password_user)
 {
-
+    $bdd = dbConnect();
+    $bddQuery = $bdd->prepare("UPDATE PERSON SET fname_user=:fname_user, name_user=:name_user, mail_user=:mail_user, password_user=:password_user WHERE id_use:id_user;");
+    $bddQuery->execute([
+        "id_user" => $id_user,
+        "fname_user" => $fname_user,
+        "name_user" => $name_user,
+        "mail_user" => $mail_user,
+        "password_user" => $password_user,
+    ]);
 }
 
-function removeUser()
+function removeUser($id_user)
 {
+    $bdd = dbConnect();
+    $bddQuery = $bdd->prepare("DELETE FROM PERSON WHERE id_use:id_user;");
+    $bddQuery->execute([
+        "id_user" => $id_user,
+    ]);
+}
 
+function getUser($id_user)
+{
+    $bdd = dbConnect();
+    $bddQuery = $bdd->prepare("SELECT * FROM PERSON WHERE id_use:id_user;");
+    $bddQuery->execute([
+        "id_user" => $id_user,
+    ]);
+    return $bddQuery->fetch(PDO::FETCH_ASSOC);
 }
