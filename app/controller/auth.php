@@ -4,11 +4,11 @@
 $requestUrl = isset($_GET['endpoint']) ? $_GET['endpoint'] : '/';
 
 switch ($requestUrl) {
-    case '/login':
+    case 'login':
         require_once "model/user.php";
         require_once "view/login.php";
         break;
-    case '/register':
+    case 'register':
         require_once "model/user.php";
         require_once "view/regsiter.php";
         break;
