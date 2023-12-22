@@ -16,6 +16,9 @@ switch ($requestUrl) {
     case 'auth':
         require_once 'app/controller/auth.php';
         break;
+    case 'profile':
+        require_once 'app/controller/profile.php';
+        break;
     case '403':
         var_dump("403");
         break;
