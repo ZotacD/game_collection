@@ -29,16 +29,16 @@ function updateUser($id_user, $fname_user, $name_user, $mail_user, $password_use
 function removeUser($id_user)
 {
     $bdd = dbConnect();
-    $bddQuery = $bdd->prepare("DELETE FROM PERSON WHERE id_use:id_user;");
+    $bddQuery = $bdd->prepare("DELETE FROM PERSON WHERE id_use=:id_user;");
     $bddQuery->execute([
         "id_user" => $id_user,
     ]);
 }
 
-function getUser($mail_user, $password_user, $id_user = -1)
+function getUser($mail_user = "", $password_user = "", $id_user = -1)
 {
     $bdd = dbConnect();
-    $bddQuery = $bdd->prepare("SELECT * FROM PERSON WHERE id_use:id_user OR ");
+    $bddQuery = $bdd->prepare("SELECT * FROM PERSON WHERE (mail_user=:mail_user AND password_user=:password_user) OR id_user=:id_user");
     $bddQuery->execute([
         "id_user" => $id_user,
         "mail_user" => $mail_user,

@@ -4,10 +4,10 @@ USE Game_Collection;
 
 CREATE TABLE PERSON (
 	id_user SMALLINT AUTO_INCREMENT PRIMARY KEY,
-    fname_user VARCHAR(100),
-    name_user VARCHAR(100),
-    mail_user VARCHAR(255),
-    password_user VARCHAR(255)
+    fname_user VARCHAR(100) NOT NULL,
+    name_user VARCHAR(100) NOT NULL,
+    mail_user VARCHAR(255) NOT NULL UNIQUE,
+    password_user VARCHAR(255) NOT NULL
 );
 
 CREATE TABLE GAME (

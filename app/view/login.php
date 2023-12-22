@@ -12,15 +12,15 @@
 
 <body>
     <div class="main">
-        <form class="card">
+        <form class="card" method="post">
             <div class="title">Se connecter à Game Collection</div>
             <div class="userInputSection">
                 <div class="text">Email :</div>
-                <input name="mail_user" />
+                <input type="email" name="mail_user" />
             </div>
             <div class="userInputSection">
                 <div class="text">Mot de passe :</div>
-                <input name="password_user" />
+                <input type="password" name="password_user" />
             </div>
             <button type="submit">SE CONNECTER</button>
             <a href="auth/register">
