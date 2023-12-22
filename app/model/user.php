@@ -35,10 +35,10 @@ function removeUser($id_user)
     ]);
 }
 
-function getUser($mail_user, $password_user, $id_user = -1)
+function getUser($mail_user = "", $password_user = "", $id_user = -1)
 {
     $bdd = dbConnect();
-    $bddQuery = $bdd->prepare("SELECT * FROM PERSON WHERE id_use:id_user OR ");
+    $bddQuery = $bdd->prepare("SELECT * FROM PERSON WHERE id_user=:id_user OR (mail_user=:mail_user AND password_user=:password_user");
     $bddQuery->execute([
         "id_user" => $id_user,
         "mail_user" => $mail_user,
