@@ -16,29 +16,29 @@
         <h1>Mon profil</h1>
 
         <form action="" method="post">
-            <div name="name">
-                <label>Nom :</label>
+            <div name="nameInputsSection">
+                <div>Nom :</div>
                 <input type="text" name="name_user" value="">
             </div>
-            <div name="fname">
-                <label>Prénom :</label>
+            <div name="fnameInputsSection">
+                <div>Prénom :</div>
                 <input type="text" name="fname_user" value="Thomas">
             </div>
-            <div name="mail">
-                <label>Email :</label>
+            <div name="mailInputsSection">
+                <div>Email :</div>
                 <input type="text" name="mail_user" value="thomas.quero@outlook.com">
             </div>            
-            <div name="password">
-                <label>Nom :</label>
+            <div name="passwordInputsSection">
+                <div>Nom :</div>
                 <input type="text" name="password_user" value="123456789">
             </div>
-            <div name="confirmPassword">
-                <label>Nom :</label>
+            <div name="confirmPasswordInputsSection">
+                <div>Nom :</div>
                 <input type="text" name="confirm_password_user" value="123456789">
             </div>
 
             <input type="submit" name="action" value="updateUser">
-            <input type="submit" name="action" value="deleteUser">
+            <input type="submit" name="action" value="removeUser">
             <input type="submit" name="action" value="disconnect">
         </form>
 

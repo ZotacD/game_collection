@@ -5,6 +5,11 @@ require_once(__DIR__ . "/vendor/autoload.php");
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
+session_start();
+if (!isset($_SESSION["id_user"])) {
+    $_SESSION["id_user"] = $_ENV["UNKNOWN_USER_ID"];
+}
+
 // Récupérer l'URL depuis le paramètre "url"
 
 $requestUrl = isset($_GET['url']) ? $_GET['url'] : '/';
