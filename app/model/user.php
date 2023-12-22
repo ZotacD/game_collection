@@ -1,5 +1,5 @@
 <?php
-require_once 'db-config.php';
+require_once 'db_config.php';
 
 function addUser($fname_user, $name_user, $mail_user, $password_user)
 {
