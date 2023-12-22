@@ -5,7 +5,7 @@ body{
     width: 100vw;
     margin: 0;
 }
-header{
+.header{
     display: flex;
     justify-content: space-between;
     align-items: center;

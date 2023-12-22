@@ -10,7 +10,7 @@ switch ($requestUrl) {
         break;
     case 'register':
         require_once "app/model/user.php";
-        require_once "app/view/regsiter.php";
+        require_once "app/view/register.php";
         break;
     default:
         header("Location: " . $_ENV["BASE_DIR"] . "404");

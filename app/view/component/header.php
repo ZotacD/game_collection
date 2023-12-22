@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <base href="<?php echo $_ENV["BASE_DIR"] ?>">
     <meta charset="UTF-8">
@@ -7,8 +8,9 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <title>Document</title>
 </head>
+
 <body>
-    <header>
+    <div class="header">
         <a href="index.php">Home</a>
         <div id="nav_right">
             <a href="index.php">MA BIBLIOTHÈQUE</a>
@@ -16,6 +18,7 @@
             <a href="index.php">CLASSEMENT</a>
             <a href="example.php">PROFIL</a>
         </div>
-    </header>
+    </div>
 </body>
+
 </html>
