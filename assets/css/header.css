@@ -17,7 +17,7 @@ body{
     height: 10vh;
     font-size: 1.1rem;
 }
-header a{
+.header a{
     color: whitesmoke;
     text-decoration: none;
 }
