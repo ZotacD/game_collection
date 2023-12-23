@@ -24,6 +24,9 @@ switch ($requestUrl) {
     case 'auth':
         require_once 'app/controller/auth.php';
         break;
+    case 'ranking':
+        require_once 'app/controller/ranking.php';
+        break;
     case '403':
         var_dump("403");
         break;
