@@ -15,7 +15,7 @@
         <div id="nav_right">
             <a href="#">MA BIBLIOTHÈQUE</a>
             <a href="#">AJOUTER UN JEU</a>
-            <a href="#">CLASSEMENT</a>
+            <a href="ranking">CLASSEMENT</a>
             <a href="profile">PROFIL</a>
         </div>
     </div>

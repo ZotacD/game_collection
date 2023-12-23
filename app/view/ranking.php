@@ -12,7 +12,33 @@
 
 <body>
     <?php require_once "app/view/component/header.php"; ?>
-
+    <div class="main">
+        <table>
+            <caption>Classement des temps passés</caption>
+            <thead>
+                <tr>
+                    <th>Joueur</th>
+                    <th>Temps passés</th>
+                    <th>Jeu favori</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($ranks as $rank) { ?>
+                    <tr>
+                        <td>
+                            <?php echo $rank["fname_user"] . " " . $rank["name_user"] ?>
+                        </td>
+                        <td>
+                            <?php echo $rank["hours_played"] ?> h
+                        </td>
+                        <td>
+                            <?php echo $rank["name_game"] ?>
+                        </td>
+                    </tr>
+                <?php } ?>
+            </tbody>
+        </table>
+    </div>
     <?php require_once "app/view/component/footer.php"; ?>
 </body>
 

@@ -46,3 +46,22 @@ function getUser($mail_user = "", $password_user = "", $id_user = -1)
     ]);
     return $bddQuery->fetch(PDO::FETCH_ASSOC);
 }
+
+function getUsersRank()
+{
+    $bdd = dbConnect();
+    $bddQuery = $bdd->prepare("SELECT PERSON.fname_user, PERSON.name_user, LIBRARY.hours_played, GAME.name_game 
+    FROM PERSON 
+    INNER JOIN LIBRARY ON LIBRARY.id_user=PERSON.id_user 
+    INNER JOIN GAME ON GAME.id_game=LIBRARY.id_game 
+    WHERE LIBRARY.hours_played IN (SELECT MAX(hours_played) FROM LIBRARY GROUP BY id_game)");
+
+    $bddQuery = $bdd->prepare("SELECT PERSON.fname_user, PERSON.name_user, MAX(LIBRARY.hours_played) AS 'hours_played', GAME.name_game 
+    FROM PERSON 
+    INNER JOIN LIBRARY ON LIBRARY.id_user=PERSON.id_user 
+    INNER JOIN GAME ON GAME.id_game=LIBRARY.id_game 
+    GROUP BY PERSON.id_user ORDER BY hours_played DESC");
+
+    $bddQuery->execute();
+    return $bddQuery->fetchAll(PDO::FETCH_ASSOC);
+}
