@@ -11,12 +11,12 @@
 
 <body>
     <div class="header">
-        <a href="index.php">Home</a>
+        <a href="#">Home</a>
         <div id="nav_right">
-            <a href="index.php">MA BIBLIOTHÈQUE</a>
-            <a href="index.php">AJOUTER UN JEU</a>
-            <a href="index.php">CLASSEMENT</a>
-            <a href="example.php">PROFIL</a>
+            <a href="#">MA BIBLIOTHÈQUE</a>
+            <a href="#">AJOUTER UN JEU</a>
+            <a href="#">CLASSEMENT</a>
+            <a href="profile">PROFIL</a>
         </div>
     </div>
 </body>
