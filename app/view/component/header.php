@@ -11,12 +11,12 @@
 
 <body>
     <div class="header">
-        <a href="#">Home</a>
+        <a href="">Home</a>
         <div id="nav_right">
-            <a href="#">MA BIBLIOTHÈQUE</a>
-            <a href="#">AJOUTER UN JEU</a>
+            <a href="add_game">MA BIBLIOTHÈQUE</a>
+            <a href="create_game">AJOUTER UN JEU</a>
             <a href="ranking">CLASSEMENT</a>
-            <a href="profile">PROFIL</a>
+            <a href="auth">PROFIL</a>
         </div>
     </div>
 </body>
