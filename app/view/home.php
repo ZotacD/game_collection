@@ -21,42 +21,23 @@
     </section>
     <h2>Mes jeux</h2>
     <section id="page">
-        <div class="games">
-            <div class="info">
-                <div class="desc">
-                    <h3>Read dead Redemption</h3>
-                    <p>100 h</p>
+        <?php 
+        $games = info_game();
+        foreach ($games as $game) {
+            ?>
+            <div class="games" style="background-image: url('<?php echo $game["url_cover"]; ?>');">
+                <div class="info">
+                    <div class="desc">
+                        <h3><?php echo htmlspecialchars($game["name_game"]); ?></h3>
+                        <p><?php echo htmlspecialchars($game["release_date"]); ?></p>
+                    </div>
+                    <p class="plateforme"><?php echo htmlspecialchars($game["platform_game"]); ?></p>
                 </div>
-                <p class="plateforme">PlayStation</p>
             </div>
-        </div>
-        <div class="games">
-            <div class="info">
-                <div class="desc">
-                    <h3>Read dead Redemption</h3>
-                    <p>100 h</p>
-                </div>
-                <p class="plateforme">PlayStation</p>
-            </div>
-        </div>
-        <div class="games">
-            <div class="info">
-                <div class="desc">
-                    <h3>Read dead Redemption</h3>
-                    <p>100 h</p>
-                </div>
-                <p class="plateforme">PlayStation</p>
-            </div>
-        </div>
-        <div class="games">
-            <div class="info">
-                <div class="desc">
-                    <h3>Read dead Redemption</h3>
-                    <p>100 h</p>
-                </div>
-                <p class="plateforme">PlayStation</p>
-            </div>
-        </div>
+            <?php
+        }
+        ?>
+        
     </section>
 
 
