@@ -10,4 +10,13 @@ function info_game()
     return $bddQuery->fetchAll(PDO::FETCH_ASSOC);
     
 }
+function info_game_with_name($name) {
+    $bdd = dbConnect();
+    $searchTerm = '%' . $name . '%'; // Ajoutez les jokers ici
+    $bddQuery = $bdd->prepare("SELECT * FROM GAME WHERE name_game LIKE ?");
+    $bddQuery->execute([$searchTerm]); // Passez le terme de recherche avec les jokers inclus
+    return $bddQuery->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
 ?>
