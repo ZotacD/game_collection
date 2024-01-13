@@ -13,3 +13,7 @@ input, button, a {
     background: none;
     text-decoration: none;
 }
+
+* {
+    font-family: 'Barlow';
+}
