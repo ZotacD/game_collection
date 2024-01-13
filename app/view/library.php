@@ -2,14 +2,13 @@
 <html lang="en">
 
 <head>
-    <base href="<?php echo $_ENV["BASE_DIR"] ?>">
+    <base href="<?php echo $_ENV["BASE_DIR"] ?>"> 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/add_game.css">
     <link rel="stylesheet" href="assets/css/utils.css">
     <title>Game collection</title>
 </head>
-
 <body>
     <?php require_once "app/view/component/header.php"; ?>
     <div id="add_game">

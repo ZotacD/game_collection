@@ -2,6 +2,7 @@ body{
     margin: 0;
     background-color: #211F2A;
     color: aliceblue;
+    font-family: 'Barlow', sans-serif;
 }
 
 #header {
