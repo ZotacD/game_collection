@@ -25,7 +25,14 @@ switch ($requestUrl) {
         require_once 'app/controller/auth.php';
         break;
     case 'profile':
-        require_once 'app/controller/profile.php';
+        if ($_SESSION["id_user"] != $_ENV["UNKNOWN_USER_ID"]) {
+            require_once 'app/controller/profile.php';
+        } else {
+            header("Location: auth/login");
+            exit();
+        }
+
+        break;
     case 'ranking':
         require_once 'app/controller/ranking.php';
         break;

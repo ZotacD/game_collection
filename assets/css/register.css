@@ -3,12 +3,14 @@
     align-items: center;
     justify-content: center;
 
-    height: 90%;
+    height: 90vh;
     width: 100%;
+
+    background: #211F2A;
 }
 
 .card {
-    box-shadow: rgba(86, 86, 87, 0.2) 0px 8px 24px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     background: #252836;
     border-radius: 20px;
 
@@ -18,7 +20,7 @@
     flex-direction: column;
     /* align-items: center; */
     justify-content: center;
-    gap: 20px;
+    gap: 10px;
 }
 
 .title {
