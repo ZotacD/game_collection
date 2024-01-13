@@ -12,38 +12,38 @@
 
 <body>
     <?php require_once "app/view/component/header.php"; ?>
-    <class name="parent">
-        <h1>Mon profil</h1>
 
-        <form action="" method="post">
-            <div name="nameInputsSection">
-                <div>Nom :</div>
-                <input type="text" name="name_user" value="">
+    <div class="main">
+        <form class="accountSection" method="post">
+            <h1>Mon profil</h1>
+
+            <div class="inputSection">
+                <label>Nom :</label>
+                <input type="text" name="name_user" value="<?php echo $user['name_user'] ?>">
             </div>
-            <div name="fnameInputsSection">
-                <div>Prénom :</div>
-                <input type="text" name="fname_user" value="Thomas">
+            <div class="inputSection">
+                <label>Prénom :</label>
+                <input type="text" name="fname_user" value="<?php echo $user['fname_user'] ?>">
             </div>
-            <div name="mailInputsSection">
-                <div>Email :</div>
-                <input type="text" name="mail_user" value="thomas.quero@outlook.com">
-            </div>            
-            <div name="passwordInputsSection">
-                <div>Nom :</div>
-                <input type="text" name="password_user" value="123456789">
+            <div class="inputSection">
+                <label>Email :</label>
+                <input type="text" name="mail_user" value="<?php echo $user['mail_user'] ?>">
             </div>
-            <div name="confirmPasswordInputsSection">
-                <div>Nom :</div>
-                <input type="text" name="confirm_password_user" value="123456789">
+            <div class="inputSection">
+                <label>Mot de passe :</label>
+                <input type="password" name="password_user">
+            </div>
+            <div class="inputSection">
+                <label>Confirmation du mot de passe :</label>
+                <input type="password" name="c_password_user">
             </div>
 
-            <input type="submit" name="action" value="updateUser">
-            <input type="submit" name="action" value="removeUser">
-            <input type="submit" name="action" value="disconnect">
+            <button type="submit" name="action" value="update">Modifier</button>
+            <button type="submit" name="action" value="delete">Supprimer mon compte</button>
+            <button type="submit" name="action" value="disconnect">Se déconnecter</button>
         </form>
+    </div>
 
-
-    </class>
     <?php require_once "app/view/component/footer.php"; ?>
 </body>
 
