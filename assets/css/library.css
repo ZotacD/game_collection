@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    height: 100%;
     overflow-x: hidden;
     font-family: 'Barlow', sans-serif;
 }
@@ -9,8 +10,8 @@ body{
     display: flex;
     flex-direction: column;
     width: 100vw;
-    min-height: 70vh;
-    height: 80vh;
+    min-height: 80vh;
+    height: 90vh;
     background-color: #211f2a;
     color: #f5f5f5;
 }
@@ -29,6 +30,7 @@ body{
     height: 4vh;
     border-radius: 5px;
     background-color: #2B2F40;
+    color: #f5f5f5;
 }
 #add_game #search_zone #btn{
     background-color: #6757d6;
@@ -59,7 +61,6 @@ body{
     flex-direction: row;
     flex-wrap: wrap;
     width: 96vw;
-    justify-content: space-between;
 }
 
 .games{
