@@ -24,6 +24,8 @@ switch ($requestUrl) {
     case 'auth':
         require_once 'app/controller/auth.php';
         break;
+    case 'profile':
+        require_once 'app/controller/profile.php';
     case 'ranking':
         require_once 'app/controller/ranking.php';
         break;

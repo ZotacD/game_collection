@@ -1,0 +1,9 @@
+.html {
+    background-color: black;
+}
+
+.parent{
+    flex: auto;
+    flex-direction: column;
+}
+
