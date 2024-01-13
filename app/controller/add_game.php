@@ -5,7 +5,13 @@ $requestUrl = isset($_GET['endpoint']) ? $_GET['endpoint'] : '/';
 
 switch ($requestUrl) {
     case '/':
-        //require_once "model/add_game.php";
+        require_once "app/model/game.php";
+        if (isset($_POST["search_game"])) {
+            $searchGame = urlencode($_POST["search_game"]);
+            header("Location: add_game.php?name_game=" . $searchGame);
+            exit();
+        }
+        
         require_once "app/view/add_game.php";
         break;
     default:
