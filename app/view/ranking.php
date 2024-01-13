@@ -15,14 +15,12 @@
     <div class="main">
         <table>
             <caption>Classement des temps passés</caption>
-            <thead>
+            <tbody>
                 <tr>
                     <th>Joueur</th>
                     <th>Temps passés</th>
                     <th>Jeu favori</th>
                 </tr>
-            </thead>
-            <tbody>
                 <?php foreach ($ranks as $rank) { ?>
                     <tr>
                         <td>
