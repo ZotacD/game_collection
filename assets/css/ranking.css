@@ -1,0 +1,50 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 80vh;
+    width: 100%;
+
+    background: #211F2A;
+}
+
+table {
+    width: 80%;
+
+    border-collapse: collapse;
+}
+
+caption {
+    font-size: 2em;
+    font-weight: 600;
+    font-family: 'barlow';
+    color: white;
+    text-align: start;
+
+    margin-bottom: 20px;
+}
+
+th {
+    text-align: start;
+    padding: 10px;
+    font-weight: 600;
+    font-family: 'barlow';
+    color: white;
+}
+
+td {
+    padding: 10px;
+    font-weight: 200;
+    font-family: 'barlow';
+    color: white;
+}
+
+
+tbody tr:nth-child(odd) {
+    background-color: #211F2A;
+  }
+
+tr:nth-child(even) {
+    background-color: #252836;
+  }

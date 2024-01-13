@@ -5,8 +5,9 @@ $requestUrl = isset($_GET['endpoint']) ? $_GET['endpoint'] : '/';
 
 switch ($requestUrl) {
     case '/':
-        //require_once "model/add_game.php";
-        require_once "app/view/add_game.php";
+        require_once "app/model/user.php";
+        $ranks = getUsersRank();
+        require_once "app/view/ranking.php";
         break;
     default:
         header("Location: " . $_ENV["BASE_DIR"] . "404");

@@ -18,14 +18,16 @@ switch ($requestUrl) {
     case '/':
         require_once 'app/controller/home.php';
         break;
-    case 'add_game':
-        require_once 'app/controller/add_game.php';
+    case 'library':
+        require_once 'app/controller/library.php';
         break;
     case 'auth':
         require_once 'app/controller/auth.php';
         break;
     case 'profile':
         require_once 'app/controller/profile.php';
+    case 'ranking':
+        require_once 'app/controller/ranking.php';
         break;
     case '403':
         var_dump("403");

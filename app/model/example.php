@@ -1,17 +1,17 @@
 <?php
 require_once 'db_config.php';
 
-function addUser()
+function addExample()
 {
 
 }
 
-function updateUser()
+function updateExample()
 {
 
 }
 
-function removeUser()
+function removeExample()
 {
 
 }
