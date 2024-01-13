@@ -19,7 +19,7 @@ switch ($requestUrl) {
         require_once 'app/controller/home.php';
         break;
     case 'library':
-        require_once 'app/controller/game.php';
+        require_once 'app/controller/library.php';
         break;
     case 'auth':
         require_once 'app/controller/auth.php';

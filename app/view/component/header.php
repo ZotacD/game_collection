@@ -13,8 +13,8 @@
     <div class="header">
         <a href="">Home</a>
         <div id="nav_right">
-            <a href="add_game">MA BIBLIOTHÈQUE</a>
-            <a href="create_game">AJOUTER UN JEU</a>
+            <a href="library">MA BIBLIOTHÈQUE</a>
+            <a href="library/add">AJOUTER UN JEU</a>
             <a href="ranking">CLASSEMENT</a>
             <a href="auth">PROFIL</a>
         </div>
