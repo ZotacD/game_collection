@@ -6,10 +6,10 @@ function addUser($fname_user, $name_user, $mail_user, $password_user)
     $bdd = dbConnect();
     $bddQuery = $bdd->prepare("INSERT INTO PERSON(fname_user, name_user, mail_user, password_user) VALUES (:fname_user, :name_user, :mail_user, :password_user);");
     $bddQuery->execute([
-        "fname_user" => $fname_user,
-        "name_user" => $name_user,
-        "mail_user" => $mail_user,
-        "password_user" => $password_user,
+        "fname_user" => htmlspecialchars($fname_user),
+        "name_user" => htmlspecialchars($name_user),
+        "mail_user" => htmlspecialchars($mail_user),
+        "password_user" => htmlspecialchars($password_user),
     ]);
 }
 
@@ -18,11 +18,11 @@ function updateUser($id_user, $fname_user, $name_user, $mail_user, $password_use
     $bdd = dbConnect();
     $bddQuery = $bdd->prepare("UPDATE PERSON SET fname_user=:fname_user, name_user=:name_user, mail_user=:mail_user, password_user=:password_user WHERE id_user=:id_user;");
     $bddQuery->execute([
-        "id_user" => $id_user,
-        "fname_user" => $fname_user,
-        "name_user" => $name_user,
-        "mail_user" => $mail_user,
-        "password_user" => $password_user,
+        "id_user" => htmlspecialchars($id_user),
+        "fname_user" => htmlspecialchars($fname_user),
+        "name_user" => htmlspecialchars($name_user),
+        "mail_user" => htmlspecialchars($mail_user),
+        "password_user" => htmlspecialchars($password_user),
     ]);
 }
 
