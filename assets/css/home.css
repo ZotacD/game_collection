@@ -5,6 +5,15 @@ body{
     font-family: 'Barlow', sans-serif;
 }
 
+.main {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
 #header {
     position: relative; /* Nécessaire pour positionner le pseudo-élément */
     width: 100%;

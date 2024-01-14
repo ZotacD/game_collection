@@ -12,38 +12,42 @@
 
 <body>
     <?php require_once "app/view/component/header.php"; ?>
+
     <section id="header">
         <img src="" alt="">
         <h1>
             <?php echo "Salut ..."; ?>PRÊT à AJOUTER DES JEUX à TA COLLECTION ?
         </h1>
     </section>
-    <h2>Mes jeux</h2>
-    <section id="page">
-        <?php
-        $games = info_game();
-        foreach ($games as $game) {
-            ?>
-            <div class="games" style="background-image: url('<?php echo $game["url_cover"]; ?>');">
-                <div class="info">
-                    <div class="desc">
-                        <h3>
-                            <?php echo htmlspecialchars($game["name_game"]); ?>
-                        </h3>
-                        <p>
-                            <?php echo htmlspecialchars($game["release_date"]); ?>
+
+    <div class="main">
+        <h2>Mes jeux</h2>
+        <section id="page">
+            <?php
+            $games = info_game();
+            foreach ($games as $game) {
+                ?>
+                <div class="games" style="background-image: url('<?php echo $game["url_cover"]; ?>');">
+                    <div class="info">
+                        <div class="desc">
+                            <h3>
+                                <?php echo htmlspecialchars($game["name_game"]); ?>
+                            </h3>
+                            <p>
+                                <?php echo htmlspecialchars($game["release_date"]); ?>
+                            </p>
+                        </div>
+                        <p class="plateforme">
+                            <?php echo htmlspecialchars($game["platform_game"]); ?>
                         </p>
                     </div>
-                    <p class="plateforme">
-                        <?php echo htmlspecialchars($game["platform_game"]); ?>
-                    </p>
                 </div>
-            </div>
-            <?php
-        }
-        ?>
+                <?php
+            }
+            ?>
 
-    </section>
+        </section>
+    </div>
 
 
     <?php require_once "app/view/component/footer.php"; ?>
