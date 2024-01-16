@@ -1,0 +1,64 @@
+.main {
+    height: 80%;
+    width: 100%;
+
+    background: #211F2A;
+}
+
+.inputColumnSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputRowSection {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.addGameSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    justify-content: start;
+    padding: 0px 120px 0px 120px;
+
+    height: 100%;
+}
+
+
+input, textarea {
+    border-radius: 5px;
+    background: #2B2F40; 
+    padding: 10px;
+    color: white;
+    max-width: 300px;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+button {
+    border-radius: 10px;
+    background: #6757D6; 
+    text-transform: uppercase;
+
+    padding: 10px 20px 10px 20px; 
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700; 
+    color: white;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 400; 
+    color: white;
+}

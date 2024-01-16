@@ -17,8 +17,8 @@ CREATE TABLE GAME (
     release_date DATE NOT NULL,
     description_game VARCHAR(500) NOT NULL,
     platform_game VARCHAR(100) NOT NULL,
-    url_cover VARCHAR(500) NOT NULL,
-    url_website VARCHAR(500) NOT NULL    
+    url_cover VARCHAR(1500) NOT NULL,
+    url_website VARCHAR(1500) NOT NULL    
 );
 
 CREATE TABLE LIBRARY (

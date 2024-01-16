@@ -17,12 +17,19 @@ function info_game_with_name($name) {
     $bddQuery->execute([$searchTerm]); // Passez le terme de recherche avec les jokers inclus
     return $bddQuery->fetchAll(PDO::FETCH_ASSOC);
 }
-function add_game($id_game) {
+function addGame($name_game, $editor_game, $release_date, $description_game, $platform_game, $url_cover, $url_website) {
     $bdd = dbConnect();
-    $searchTerm = '%' . $name . '%'; // Ajoutez les jokers ici
-    $bddQuery = $bdd->prepare("SELECT * FROM GAME WHERE name_game LIKE ? ");
-    $bddQuery->execute([$searchTerm,$_SESSION["id_user"]]); // Passez le terme de recherche avec les jokers inclus
-    return $bddQuery->fetchAll(PDO::FETCH_ASSOC);
+    $bddQuery = $bdd->prepare("INSERT INTO GAME(name_game, editor_game, release_date, description_game, platform_game, url_cover, url_website) 
+    VALUES (:name_game, :editor_game, :release_date, :description_game, :platform_game, :url_cover, :url_website)");
+    $bddQuery->execute([
+        "name_game" => htmlspecialchars($name_game),
+        "editor_game" => htmlspecialchars($editor_game),
+        "release_date" => htmlspecialchars($release_date),
+        "description_game" => htmlspecialchars($description_game),
+        "platform_game" => htmlspecialchars($platform_game),
+        "url_cover" => htmlspecialchars($url_cover),
+        "url_website" => htmlspecialchars($url_website)
+    ]);
 }
 
 ?>
