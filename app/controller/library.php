@@ -71,7 +71,7 @@ function addGameToLibraryInputs()
         return;
     }
 
-    addGameToLibrary($id_game, $_SESSION["id_user"]);
+    addUserGame($id_game, $_SESSION["id_user"]);
 
     header("Location: " . $_ENV["BASE_DIR"]);
     exit();
