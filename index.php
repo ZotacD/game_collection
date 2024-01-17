@@ -18,6 +18,9 @@ switch ($requestUrl) {
     case '/':
         require_once 'app/controller/home.php';
         break;
+    case 'game':
+        require_once 'app/controller/game.php';
+        break;
     case 'library':
         if ($_SESSION["id_user"] != $_ENV["UNKNOWN_USER_ID"]) {
             require_once 'app/controller/library.php';

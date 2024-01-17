@@ -26,7 +26,8 @@
             <?php
             foreach ($games as $game) {
                 ?>
-                <a class="games" href="" style="background-image: url('<?php echo $game["url_cover"]; ?>');">
+                <a class="games" href="game?id_game=<?php echo $game["id_game"]; ?>"
+                    style="background-image: url('<?php echo $game["url_cover"]; ?>');">
                     <div class="info">
                         <div class="desc">
                             <h3>

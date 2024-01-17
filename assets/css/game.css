@@ -1,0 +1,76 @@
+.main {
+    height: 80vh;
+    width: calc(100% - (120px * 2));
+
+    background: #211F2A;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 0px 120px 0px 120px;
+}
+
+.inputSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.gameSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    justify-content: start;
+
+    height: 100%;
+}
+
+.imageSection {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    justify-content: start;
+
+    height: 100%;
+}
+
+.imageSection img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    max-width: 300px;
+}
+
+input {
+    border-radius: 5px;
+    background: #2B2F40; 
+    padding: 10px;
+    color: white;
+    max-width: 300px;
+}
+
+button {
+    border-radius: 10px;
+    background: #6757D6; 
+    text-transform: uppercase;
+
+    padding: 10px 20px 10px 20px; 
+    color: white;
+    width: fit-content;
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 700; 
+    color: white;
+}
+
+label {
+    font-size: 16px;
+    font-weight: 400; 
+    color: white;
+}
+
