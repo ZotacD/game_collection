@@ -15,13 +15,13 @@ switch ($requestUrl) {
 
         switch ($action) {
             case "update":
-                updateAccount();
+                updateUserInputs();
                 break;
             case "delete":
-                deleteAccount();
+                removeUserInputs();
                 break;
             case "disconnect":
-                disconnect();
+                disconnectInputs();
                 break;
             default:
                 break;
@@ -41,7 +41,7 @@ function setupPage()
     $user = getUserById($_SESSION["id_user"]);
 }
 
-function updateAccount()
+function updateUserInputs()
 {
     global $user;
 
@@ -79,14 +79,14 @@ function updateAccount()
         exit();
     }
 }
-function deleteAccount()
+function removeUserInputs()
 {
     removeUser($_SESSION["id_user"]);
     session_destroy();
     header("Location: auth/register");
     exit();
 }
-function disconnect()
+function disconnectInputs()
 {
     session_destroy();
     header("Location: auth/login");

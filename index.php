@@ -19,7 +19,13 @@ switch ($requestUrl) {
         require_once 'app/controller/home.php';
         break;
     case 'library':
-        require_once 'app/controller/library.php';
+        if ($_SESSION["id_user"] != $_ENV["UNKNOWN_USER_ID"]) {
+            require_once 'app/controller/library.php';
+        } else {
+            header("Location: auth/login");
+            exit();
+        }
+
         break;
     case 'auth':
         require_once 'app/controller/auth.php';

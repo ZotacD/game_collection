@@ -29,6 +29,12 @@ function updateUser($id_user, $fname_user, $name_user, $mail_user, $password_use
 function removeUser($id_user)
 {
     $bdd = dbConnect();
+
+    $bddQuery = $bdd->prepare("DELETE FROM LIBRARY WHERE id_user=:id_user;");
+    $bddQuery->execute([
+        "id_user" => $id_user,
+    ]);
+
     $bddQuery = $bdd->prepare("DELETE FROM PERSON WHERE id_user=:id_user;");
     $bddQuery->execute([
         "id_user" => $id_user,
@@ -74,7 +80,8 @@ function getUsersRank()
     FROM PERSON 
     INNER JOIN LIBRARY ON LIBRARY.id_user=PERSON.id_user 
     INNER JOIN GAME ON GAME.id_game=LIBRARY.id_game 
-    GROUP BY PERSON.id_user ORDER BY hours_played DESC");
+    WHERE hours_played = (SELECT MAX(hours_played) FROM LIBRARY WHERE id_user = PERSON.id_user)
+    GROUP BY person.id_user ORDER BY hours_played DESC");
 
     $bddQuery->execute();
     return $bddQuery->fetchAll(PDO::FETCH_ASSOC);

@@ -42,7 +42,8 @@
                             </p>
                             <form method="post">
                                 <input type="hidden" name="id_game" value="<?php echo $game["id_game"]; ?>">
-                                <input type="submit" name="add_game_library" class="btn_add" value="AJOUTER A LA BIBLIOTHÈQUE">
+                                <button type="submit" name="action" class="btn_add" value="add">AJOUTER A LA
+                                    BIBLIOTHÈQUE</button>
                             </form>
                         </div>
                     </div>
