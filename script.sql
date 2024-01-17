@@ -25,7 +25,6 @@ CREATE TABLE LIBRARY (
 	id_user SMALLINT,
     id_game SMALLINT,
     hours_played INT NOT NULL,
-    PRIMARY KEY(id_game, id_user),
  	CONSTRAINT foreign_key_id_game FOREIGN KEY(id_game) REFERENCES GAME(id_game),
     CONSTRAINT foreign_key_id_user FOREIGN KEY(id_user) REFERENCES PERSON(id_user)
 );
