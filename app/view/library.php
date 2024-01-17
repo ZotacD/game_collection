@@ -25,7 +25,6 @@
             <h1>Mes jeux</h1>
             <div id="containeur_games">
                 <?php
-                $games = empty($_GET["search_game"]) ? info_game() : info_game_with_name($_GET["search_game"]);
                 foreach ($games as $game) {
                     ?>
                     <div class="games" style="background-image: url('<?php echo $game["url_cover"]; ?>');">
