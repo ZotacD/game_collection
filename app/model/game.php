@@ -10,6 +10,14 @@ function info_game()
     return $bddQuery->fetchAll(PDO::FETCH_ASSOC);
     
 }
+function info_game_with_id($id_user)
+{
+    $bdd = dbConnect();
+    $bddQuery = $bdd->prepare("SELECT * FROM GAME INNER JOIN LIBRARY ON LIBRARY.id_game=GAME.id_game INNER JOIN PERSON ON PERSON.id_user=LIBRARY.id_user WHERE PERSON.id_user = :id_user");
+    $bddQuery->execute(['id_user' => $id_user]);
+    return $bddQuery->fetchAll(PDO::FETCH_ASSOC);
+}
+
 function info_game_with_name($name) {
     $bdd = dbConnect();
     $searchTerm = '%' . $name . '%'; // Ajoutez les jokers ici
@@ -29,6 +37,15 @@ function addGame($name_game, $editor_game, $release_date, $description_game, $pl
         "platform_game" => htmlspecialchars($platform_game),
         "url_cover" => htmlspecialchars($url_cover),
         "url_website" => htmlspecialchars($url_website)
+    ]);
+}
+
+function add_to_library($id_game, $id_user) {
+    $bdd = dbConnect();
+    $bddQuery = $bdd->prepare("INSERT INTO LIBRARY(id_game, id_user) VALUES (:id_game, :id_user)");
+    $bddQuery->execute([
+        "id_game" => htmlspecialchars($id_game),
+        "id_user" => htmlspecialchars($id_user)
     ]);
 }
 
