@@ -5,12 +5,18 @@ $requestUrl = isset($_GET['endpoint']) ? $_GET['endpoint'] : '/';
 
 switch ($requestUrl) {
     case '/':
+        if(session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+        if(!isset($_SESSION["id_user"])){
+            header("Location: ".$_ENV["BASE_DIR"]."login");
+            exit();
+        }
         require_once "app/model/game.php";
-        $games = empty($_GET["search_game"]) ? info_game() : info_game_with_name($_GET["search_game"]);
-
-        if (isset($_POST["search_game"])) {
-            $searchGame = urlencode($_POST["search_game"]);
-            header("Location: add_game.php?name_game=" . $searchGame);
+        $games = empty($_GET["search_game"]) ? without_game($_SESSION['id_user']) : info_game_with_name($_GET["search_game"]);
+        if (isset($_POST["add_game_library"])) {
+            add_to_library($_SESSION["id_user"],$_POST["id_game"]);
+            header("Location: ".$_ENV["BASE_DIR"]);
             exit();
         }
 

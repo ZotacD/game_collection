@@ -26,7 +26,7 @@
             <?php
             foreach ($games as $game) {
                 ?>
-                <div class="games" style="background-image: url('<?php echo $game["url_cover"]; ?>');">
+                <a class="games" href="" style="background-image: url('<?php echo $game["url_cover"]; ?>');">
                     <div class="info">
                         <div class="desc">
                             <h3>
@@ -40,7 +40,7 @@
                             <?php echo $game["platform_game"]; ?>
                         </p>
                     </div>
-                </div>
+                </a>
                 <?php
             }
             ?>
