@@ -6,6 +6,7 @@ $requestUrl = isset($_GET['endpoint']) ? $_GET['endpoint'] : '/';
 switch ($requestUrl) {
     case '/':
         require_once "app/model/game.php";
+        $games = empty($_GET["search_game"]) ? info_game() : info_game_with_name($_GET["search_game"]);
 
         if (isset($_POST["search_game"])) {
             $searchGame = urlencode($_POST["search_game"]);
