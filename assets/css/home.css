@@ -15,7 +15,7 @@ body{
 }
 
 #header {
-    position: relative; /* Nécessaire pour positionner le pseudo-élément */
+    position: relative; 
     width: 100%;
     height: 50vh;
     color: white;
@@ -23,7 +23,7 @@ body{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    z-index: 0; /* Assurez-vous que le z-index du header est inférieur à celui du texte */
+    z-index: 0; 
   }
   
   #header::before {
@@ -33,18 +33,18 @@ body{
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(33, 31, 42, 0.5); /* Couleur teintée */
+    background-color: rgba(33, 31, 42, 0.5); 
     mix-blend-mode: multiply;
-    z-index: -1; /* Le pseudo-élément est derrière le contenu du header */
+    z-index: -1; 
   }
   
   #header h1 {
-    position: relative; /* Cela assure que le h1 est positionné par rapport au header */
+    position: relative;
     color: #ededed;
     padding-top: 5vh;
     margin-left: 10vw;
     font-size: 2rem;
-    z-index: 1; /* Plus haut que le pseudo-élément pour s'assurer qu'il apparaisse au-dessus */
+    z-index: 1; 
   }
   
 
@@ -52,7 +52,8 @@ body{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 69vw;
+    width: 90vw;
+    min-height: 20vh;
 }
 
 .games{
@@ -61,8 +62,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    background-size: cover; /* Cover the entire area of the element */
-    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    background-repeat: no-repeat; 
     margin-bottom: 5vh;
     border-radius: 10px;
     margin-left: 1%;

@@ -31,14 +31,14 @@
                         <div class="info">
                             <div class="desc">
                                 <h3>
-                                    <?php echo htmlspecialchars($game["name_game"]); ?>
+                                    <?php echo $game["name_game"]; ?>
                                 </h3>
                                 <p>
-                                    <?php echo htmlspecialchars($game["release_date"]); ?>
+                                    <?php echo $game["release_date"]; ?>
                                 </p>
                             </div>
                             <p class="plateforme">
-                                <?php echo htmlspecialchars($game["platform_game"]); ?>
+                                <?php echo $game["platform_game"]; ?>
                             </p>
                             <form method="post">
                                 <input type="hidden" value="<?php echo $game["id_game"]; ?>">
